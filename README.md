@@ -21,7 +21,7 @@ The latter is useful at places like Internet cafés where you lack access to the
       * Disable intro video to launch the game faster
       * Disable joystick support to reduce RAM usage
       * Run autoexec.cfg
-3. Go to the Nvidia Control Panel -> Display -> Adjuset desktop size and position -> 2. Apply the following settings -> Select Full-screen and ensure Refresh rate is 144 Hz
+3. Go to the Nvidia Control Panel -> Display -> Adjust desktop size and position -> 2. Apply the following settings -> Select Full-screen and ensure Refresh rate is 144 Hz
 4. Launch the game
 5. Enjoy!
 
@@ -52,5 +52,5 @@ python -m virtualenv env
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 .\env\Scripts\activate
 pip install -r requirements.txt
-python .\compile.py cfg/autoexec.cfg bundle.cfg
+python minify.py .\cfg\autoexec.cfg
 ```

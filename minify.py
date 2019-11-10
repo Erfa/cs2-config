@@ -50,11 +50,17 @@ def minify_cfg(cfg):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Minify a complex CS:GO config into one line.')
-    parser.add_argument('filename', help='The entry point for your config', type=argparse.FileType('r'))
+    parser.add_argument('input', help='The entry point file for your config', type=argparse.FileType('r'))
+    parser.add_argument('output', help='The output file for the minified config', type=argparse.FileType('w'), nargs='?')
     args = parser.parse_args()
 
-    result = parse_csgo_config(args.filename)
+    with args.input as f:
+        result = parse_csgo_config(f)
 
-    print json.dumps(result.asDict(), indent=4)
+    minified = minify_cfg(result)
 
-    print minify_cfg(result)
+    if args.output:
+        with args.output as f:
+            f.write(minified)
+    else:
+        print(minified)
