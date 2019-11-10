@@ -38,11 +38,11 @@ def minify_cfg(cfg):
     for cmd in cfg['commands']:
         minified_cmd = minify_command(cmd)
 
-        if len(line) + len(minified_cmd) < 512:
-            line += minified_cmd
-        else:
+        if len(line) + len(minified_cmd) >= 512:
             lines.append(line)
             line = ''
+
+        line += minified_cmd
 
     lines.append(line)
     return '\n'.join(lines)
@@ -54,5 +54,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     result = parse_csgo_config(args.filename)
+
+    print json.dumps(result.asDict(), indent=4)
 
     print minify_cfg(result)
