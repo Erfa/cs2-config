@@ -22,8 +22,9 @@ The latter is useful at places like Internet cafés where you lack access to the
       * Disable joystick support to reduce RAM usage
       * Makes sure to run autoexec.cfg
 3. Go to the Nvidia Control Panel -> Display -> Adjust desktop size and position -> 2. Apply the following settings -> Select Full-screen and ensure Refresh rate is 144 Hz
-4. Launch the game
-5. Enjoy!
+4. Set the mouse to 1000 Hz, 1500 CPI
+5. Launch the game
+6. Enjoy!
 
 ### Method 2: In-game
 
@@ -37,7 +38,8 @@ The latter is useful at places like Internet cafés where you lack access to the
    * Set Texture Filtering Mode to Anisotropic 16x
    * Disable vsync
    * Disable Motion Blur
-4. Enjoy!
+4. Experiment with `sensitivity` until you get something reasonable
+5. Enjoy!
 
 ## minify.py
 
