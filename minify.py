@@ -27,12 +27,25 @@ def minify_argument(argument):
 
 def minify_command(command):
     if command['args']:
-        return command['cvar'] + ' ' + ' '.join(minify_argument(arg) for arg in command['args'])
+        return command['cvar'] + ' ' + ' '.join(minify_argument(arg) for arg in command['args']) + ';'
     else:
-        return command['cvar']
+        return command['cvar'] + ';'
 
 def minify_cfg(cfg):
-    return ';'.join(minify_command(cmd) for cmd in cfg['commands'])
+    lines = []
+    line = ''
+
+    for cmd in cfg['commands']:
+        minified_cmd = minify_command(cmd)
+
+        if len(line) + len(minified_cmd) < 512:
+            line += minified_cmd
+        else:
+            lines.append(line)
+            line = ''
+
+    lines.append(line)
+    return '\n'.join(lines)
 
 
 if __name__ == '__main__':
@@ -42,5 +55,4 @@ if __name__ == '__main__':
 
     result = parse_csgo_config(args.filename)
 
-    minified = minify_cfg(result)
-    print minified
+    print minify_cfg(result)
