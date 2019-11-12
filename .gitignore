@@ -1,2 +1,5 @@
 .vscode/
 env/
+cfg/config.cfg
+cfg/videodefaults.txt
+socache.dt
