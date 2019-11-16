@@ -1,7 +1,7 @@
 import argparse
-import json
 
-from pyparsing import Word, alphanums, ZeroOrMore, OneOrMore, Literal, LineEnd, Or, Group, ParserElement, restOfLine, QuotedString
+from pyparsing import Word, alphanums, ZeroOrMore, OneOrMore, Literal, LineEnd, Or, Group, ParserElement, restOfLine, \
+    QuotedString
 
 
 ParserElement.setDefaultWhitespaceChars(' \t')
@@ -22,14 +22,17 @@ config = Group(ZeroOrMore(command))('commands').ignore(comment)
 def parse_csgo_config(filename):
     return config.parseFile(filename, parseAll=True)
 
+
 def minify_argument(argument):
     return '"' + argument + '"'
+
 
 def minify_command(command):
     if command['args']:
         return command['cvar'] + ' ' + ' '.join(minify_argument(arg) for arg in command['args']) + ';'
     else:
         return command['cvar'] + ';'
+
 
 def minify_cfg(cfg):
     lines = []
