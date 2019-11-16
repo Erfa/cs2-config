@@ -27,8 +27,12 @@ jobs:
     - name: Build bundle.cfg
       run: |
         python minify.py cfg/autoexec.cfg > bundle.cfg
-    - name: Upload artifact
-      uses: actions/upload-artifact@v1.0.0
+    - name: Commit bundle.cfg
+      uses: EndBug/add-and-commit@v2.1.0
       with:
-        name: bundle.cfg
-        path: bundle.cfg
+        author_name: Build Bot
+        author_email: erfa90@gmail.com
+        message: "Update bundle.cfg"
+        path: "bundle.cfg"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
