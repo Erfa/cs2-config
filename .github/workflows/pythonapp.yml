@@ -26,4 +26,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build bundle.cfg
       run: |
-        python minify.py cfg/autoexec.cfg
+        python minify.py cfg/autoexec.cfg > bundle.cfg
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: bundle.cfg
+        path: bundle.cfg
