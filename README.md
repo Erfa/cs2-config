@@ -22,7 +22,7 @@ The latter is useful at places like Internet cafés where you lack access to the
       * Disable joystick support to reduce RAM usage
       * Makes sure to run autoexec.cfg
 3. Go to the Nvidia Control Panel -> Display -> Adjust desktop size and position -> 2. Apply the following settings -> Select Full-screen and ensure Refresh rate is 144 Hz
-4. Set the mouse to 1000 Hz, 1500 CPI
+4. Set the mouse to 1000 Hz, 1600 CPI
 5. Launch the game
 6. Enjoy!
 
