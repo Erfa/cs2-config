@@ -1,5 +1,10 @@
 .vscode/
 env/
 cfg/config.cfg
+cfg/gamestate_integration_observerspectator.cfg
+cfg/observer.cfg
+cfg/trustedlaunch.cfg
 cfg/videodefaults.txt
+cfg/video.*.txt
+deepstats/
 socache.dt
