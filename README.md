@@ -13,10 +13,9 @@ The latter is useful at places like Internet cafés where you lack access to the
   (Replace <steam_id> with your user's Steam id. It's often only one folder to choose from)
 2. Set the launch opitions to the following:
    ```
-   -console -refresh 144 -novid -nojoy +exec autoexec
+   -refresh 144 -novid -nojoy +exec autoexec
    ```
    These launch options will do the following:
-      * Ensure console is enabled
       * Sets the refresh rate to 144 Hz
       * Disable intro video to launch the game faster
       * Disable joystick support to reduce RAM usage
