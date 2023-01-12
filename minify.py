@@ -41,7 +41,7 @@ def minify_cfg(cfg):
     for cmd in cfg['commands']:
         minified_cmd = minify_command(cmd)
 
-        if len(line) + len(minified_cmd) >= 512:
+        if len(line) + len(minified_cmd) >= 255:
             lines.append(line)
             line = ''
 
