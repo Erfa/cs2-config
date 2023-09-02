@@ -1,8 +1,11 @@
-# CS:GO Config
+# CS2 Config
 
-This repo is my personal todo list for how to configure CS:GO on a new machine.
+This repo is my personal todo list for how to configure CS2 on a new machine.
 
 ## Installation
+For CS2, current approach is just to copy the files in [CS2]CS2 to `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg`.
+This will probably be revised.
+For CS:GO, keep reading.
 
 There's two ways to install the configs.
 One is to copy files to your local Steam folder (recommended), the other one is to setup things manually in game.

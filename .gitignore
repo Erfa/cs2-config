@@ -6,5 +6,6 @@ cfg/observer.cfg
 cfg/trustedlaunch.cfg
 cfg/videodefaults.txt
 cfg/video.*.txt
+cfg/cs2*
 deepstats/
 socache.dt
