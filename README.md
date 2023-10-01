@@ -4,7 +4,11 @@ This repo is my personal todo list for how to configure CS2 on a new machine.
 
 ## Installation
 For CS2, current approach is just to copy the files in [CS2](CS2) to `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg`.
+Add `-refresh 144 -novid -nojoy +exec autoexec` to launch options.
+Ensure NVIDIA Control Panel has set refresh rate.
+
 This will probably be revised.
+
 For CS:GO, keep reading.
 
 There's two ways to install the configs.
